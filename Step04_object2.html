@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_object2.html</title>
+</head>
+<body>
+    <script>
+        let num=1;
+        let name="김구라";
+        let isMan=true;
+
+        let mem={num:num , name:name , isMan:isMan}; // ':' 좌측은 키값 , 우측은 값을 참조, 이런식으로 변수명을 같게 할수있음 
+        
+        let mem2={num , name , isMan}; // mem과 구조가 같음 , 더 편리한 방법
+
+        let mem3={num:num , name:name , isMan:isMan , sing:function(){}};
+
+        let mem4={num , name , isMan, sing(){}}; //이것도 더 간략히 작성한 방법 , 자바스크립트 리엑트 뷰에서 많이씀
+        
+        //object 의 key 값으로 사용할 문자열을 변수에 대입하고
+        let a="num";
+        let b="name";
+        let c="isMan";
+        //object 의 key 값을 변수 안에 있는 값으로 결정할수 있다.
+        let mem5={[a]:2, [b]:"해골", [c]:false};
+        
+    </script>
+</body>
+</html>
