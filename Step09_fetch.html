@@ -18,10 +18,10 @@
         document.querySelector("#moreBtn").addEventListener("click",function(){
 
             //서버에 friends.json 문서를 요청해서 받아온다. fetch <- builtin 함수
-        fetch("friends.json")
+        fetch("friends.json") 
         .then(function(response){//fetch함수는 promise 객체를 리턴한다. 비동기처리를 해야하기 때문!
-            console.log(response);
-            return response.json();
+            console.log(response); 
+            return response.json(); // 이건 약속된 부분 ,parse를 해서 넣어줌
         }).then(function(data){
             //data 는 친구 목록이 들어 있는 array이다.
             console.log(data);
@@ -31,8 +31,23 @@
                 document.querySelector("#friendList").append(li);
             }
         });
-
+            console.log("요청함");
         });
+
+
+        // --- JSON ----
+        let str1=`
+            {"num":1, "name":"김구라" , "isMan" : true}
+        
+            `; //json 형식을 따르는 string
+
+        let obj1={num:1, name:"김구라" , isMan:true};
+        let obj2=JSON.parse(str1);
+
+        let str2=`
+            ["김구라","해골","원숭이"]
+        `;
+        let arr2=JSON.parse(str2);
         
     </script>
 </body>

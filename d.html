@@ -9,12 +9,38 @@
 </head>
 <body>
     <script>
-    function hello1(number, name){
-        console.log('welcome to koonsland');
-        console.log(`${number} : ${name}`);
+    let myName="김구라"
+
+    function test(num){
+
+        const delay=Math.random()*5000+5000;
+        setTimeout(function(){
+            console.log("num:"+num);
+            console.log("myName:" +myName);
+        },delay);
     }
 
-    setTimeout(hello1,3000,1,'ironman');
+    test(10);
+
+    test(20);
+
+// JSON 표기법
+    {
+        "Name" : "LEE" , 
+        "Addr" : "seoul" , 
+        "LikeFood" : ["chicken","pizza","hamburger"]
+    }
+//XML 표기법
+    <info>
+        <name>LEE</name>
+        <addr>seoul</addr>
+        <like-food>
+            <food>chicken</food>
+            <food>pizza</food>
+            <food>hamburger</food>
+        </like-food>
+    </info>
+
     </script>
     
 </body>

@@ -9,12 +9,12 @@
 <body>
     <script>
         //메뉴를 주문하는 함수라고 가정하자
-        function order(menu, callback){
+        function order(menu, callback){ // 1.function 이 callback 이란데에 담아졌다가
             //메뉴를 준비하는데 걸리는 시간이 랜덤하다고 가정하자
             const delay=Math.random()*5000+5000; //5000 ~ 10000 사이의 랜덤한 숫자
             setTimeout(function(){
                 console.log(menu+" 가 준비 되었습니다.");
-                callback(menu);
+                callback(menu); // 2. 호출된다.
             }, delay);
         }
 
